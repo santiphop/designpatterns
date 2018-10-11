@@ -1,4 +1,4 @@
-package adapterpattern;
+package adapter;
 
 import java.util.ArrayList;
 
