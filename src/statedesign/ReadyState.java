@@ -11,6 +11,7 @@ public class ReadyState implements State {
     public void chooseStation(int i) {
         System.out.println("choosing station...");
         vendingMachine.setPrice(i);
+        System.out.println("station price is " + vendingMachine.getPrice() + " baht.");
         vendingMachine.setState(vendingMachine.getInsertingState());
     }
 

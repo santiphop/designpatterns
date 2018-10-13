@@ -20,9 +20,10 @@ public class FinishState implements State {
     @Override
     public void dispense() {
         System.out.println("dispensing ticket...");
-        System.out.println("returning " + vendingMachine.changeMoney() + " baht.");
+        System.out.println("returning change " + vendingMachine.changeMoney() + " baht...");
         vendingMachine.setZeroMoney();
         vendingMachine.setState(vendingMachine.getReadyState());
+        System.out.println("Vending Machine is ready to service :)");
     }
 
     @Override

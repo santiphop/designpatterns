@@ -5,7 +5,7 @@ public class VendingMachine {
     private State insertingState;
     private State finishState;
 
-    private State state = readyState;
+    private State state;
     private int currentMoney;
     private int price;
 
@@ -14,6 +14,8 @@ public class VendingMachine {
         readyState = new ReadyState(this);
         insertingState = new InsertingState(this);
         finishState = new FinishState(this);
+        state = readyState;
+        System.out.println("Vending Machine is ready to service :)");
     }
 
     public void addMoney(int i) {
@@ -67,6 +69,8 @@ public class VendingMachine {
     public int getPrice() {
         return price;
     }
+
+    public int getRemainMoney() { return price - currentMoney; }
 
     @Override
     public String toString() {
